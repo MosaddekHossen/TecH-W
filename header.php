@@ -98,4 +98,5 @@
     <div class="body-overlay"></div>
     <!-- tp-offcanvus-area-end -->
 
+    <!-- Header part -->
     <?php tecHub_header(); ?>
