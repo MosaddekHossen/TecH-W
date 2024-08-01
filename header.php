@@ -1,6 +1,7 @@
 <!doctype html>
 <!-- <html class="no-js" lang="zxx"> -->
 <html <?php language_attributes(); ?>>
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <?php if (is_singular() && pings_open(get_queried_object())) : ?>
