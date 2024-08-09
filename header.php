@@ -24,7 +24,7 @@
         <div class="loader"></div>
         <div class="loder-section left-section"></div>
         <div class="loder-section right-section"></div>
-        <div class="loader-brand-icon"><img src="assets/img/logo/preloder.png" alt=""></div>
+        <div class="loader-brand-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo/preloder.png" alt=""></div>
     </div>
     <!-- pre loader area end -->
 
@@ -59,7 +59,7 @@
             </div>
             <div class="tpoffcanvas__logo">
                 <a href="index.html">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo/logo.png" alt="">
                 </a>
             </div>
             <div class="tpoffcanvas__title">
@@ -100,3 +100,40 @@
 
     <!-- Header part -->
     <?php tecHub_header(); ?>
+
+    <!-- slider area start -->
+    <section class="tp-slider-5-area p-relative z-index-1 fix">
+        <div class="tp-slider-5-height">
+            <div class="tp-slider-5-bg" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider-5-bg-1.png"></div>
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="tp-slider-5-content p-relative z-index-11">
+                            <div class="tp-slider-5-title-box mb-50 wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                                <span class="tp-slider-sub-title tp-slider-sub-title-5">5m people trust us</span>
+                                <h1 class="tp-slider-title tp-slider-title-5">Affrodable Big
+                                    <span>Technology</span>
+                                    Solution.
+                                </h1>
+                                <p class="tp-slider-5-paragraph">Eqipped with human like intelligence, our chatbeats established <br>
+                                    fluent and interactive design quality dialouges</p>
+                            </div>
+                            <div class="tp-slider-5-btn-box d-inline-flex wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
+                                <a class="tp-btn" rel="noreferrer" href="contact.html" target="_blank"><span>Get Started</span></a>
+                                <a class="tp-btn tp-btn-white" rel="noreferrer" href="contact.html" target="_blank"><span>Contact Us</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="tp-slider-5-thumb p-relative z-index-1">
+                            <img class="tp-slider-5-main-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/shape/slider-5-man1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tp-slider-5-bg-shape">
+            <img class="tp-slider-5-bg-shape1" src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/shape/slider-5-shape2.png" alt="">
+        </div>
+    </section>
+    <!-- slider area end -->
