@@ -1,3 +1,10 @@
+<?php
+$header_email = get_theme_mod('header_email', 'techubinfo@mail.com');
+$header_location = get_theme_mod('header_location', 'Manchester 21, Zurich, CH');
+$header_option_01 = get_theme_mod('header_page_1', 'Faq / ');
+$header_option_02 = get_theme_mod('header_page_2', 'Service / ');
+$header_option_03 = get_theme_mod('header_page_3', 'Contact');
+?>
 <!-- header area start -->
 <header class="tp-header-height">
     <div class="tp-header-top tp-header-5-top pt-10 pb-10 pl-110 pr-110 d-none d-xl-block">
@@ -5,17 +12,30 @@
             <div class="row">
                 <div class="col-xl-6">
                     <div class="tp-header-top-address tp-header-5-top-address">
-                        <span><i class="fa-thin fa-location-dot"></i><a href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"> Manchester 21, Zurich, CH</a></span>
-                        <span><i class="fa-light fa-envelope"></i> <a href="mailto:techubinfo@mail.com">techubinfo@mail.com</a></span>
+                        <?php if (!empty($header_location)): ?>
+                            <span><i class="fa-thin fa-location-dot"></i><a href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"><?php echo $header_location; ?> </a></span>
+                        <?php endif; ?>
+                        <?php if (!empty($header_email)): ?>
+                            <span><i class="fa-light fa-envelope"></i> <a href="mailto:techubinfo@mail.com"><?php echo $header_email; ?> </a></span>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="tp-header-top-right d-flex justify-content-end">
                         <div class="tp-header-top-menu">
                             <ul>
-                                <li><a href="faq.html">Faq <span>/</span></a></li>
+                                <!-- <li><a href="faq.html">Faq <span>/</span></a></li>
                                 <li><a href="service.html">Service <span>/</span></a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact.html">Contact</a></li> -->
+                                <?php if (!empty($header_option_01)): ?>
+                                    <li><a href="faq.html"><?php echo $header_option_01; ?> </a></li>
+                                <?php endif; ?>
+                                <?php if (!empty($header_option_02)): ?>
+                                    <li><a href="service.html"><?php echo $header_option_02; ?></a></li>
+                                <?php endif; ?>
+                                <?php if (!empty($header_option_03)): ?>
+                                    <li><a href="contact.html"><?php echo $header_option_03; ?></a></li>
+                                <?php endif; ?>
                             </ul>
                         </div>
                         <div class="tp-header-top-social">
@@ -35,7 +55,8 @@
                 <div class="row align-items-center">
                     <div class="col-xl-2 col-lg-4 col-md-4 col-6">
                         <div class="logo">
-                            <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo/logo.png" alt=""></a>
+                            <?php harry_logo(); ?>
+                            <!-- <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo/logo.png" alt=""></a> -->
                         </div>
                     </div>
                     <div class="col-xl-6 d-none d-xl-block">

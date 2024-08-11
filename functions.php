@@ -68,8 +68,14 @@ add_action('after_setup_theme', 'theme_setup');
 
 function tecHub_header()
 {
-    get_template_part('include/template-parts/header/header-1');
+    get_template_part('template-parts/header/header-1');
+}
+
+// Kirki class condition
+if (class_exists('Kirki')) {
+    include_once("include/techub-kirki.php");
 }
 
 // nec files
 include_once('include/common/scripts.php');
+include_once('include/template-function.php');
