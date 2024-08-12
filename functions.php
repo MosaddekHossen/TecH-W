@@ -71,6 +71,12 @@ function tecHub_header()
     get_template_part('template-parts/header/header-1');
 }
 
+// tecHub_footer
+function tecHub_footer()
+{
+    get_template_part('template-parts/footer/footer');
+}
+
 // Kirki class condition
 if (class_exists('Kirki')) {
     include_once("include/techub-kirki.php");

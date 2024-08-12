@@ -1,11 +1,5 @@
 <?php
 
-// tecHub_footer
-function tecHub_footer()
-{
-    get_template_part('template-parts/footer/footer');
-}
-
 // tecHub_logo
 function tecHub_logo()
 {
