@@ -66,6 +66,20 @@ function theme_setup()
 }
 add_action('after_setup_theme', 'theme_setup');
 
+// tecHub_menu
+function tecHub_menu()
+{
+    wp_nav_menu(
+        array(
+            'theme_location'  => 'main-menu',
+            'menu_class'      => '',
+            'menu_id'         => '',
+            'fallback_cb'     => 'TecHub_Walker_Nav_Menu::fallback',
+            'walker'     => new TecHub_Walker_Nav_Menu,
+        )
+    );
+}
+
 function tecHub_header()
 {
     get_template_part('template-parts/header/header-1');
@@ -85,3 +99,4 @@ if (class_exists('Kirki')) {
 // nec files
 include_once('include/common/scripts.php');
 include_once('include/template-function.php');
+include_once('include/nav-walker.php');

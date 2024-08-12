@@ -63,7 +63,7 @@ $header_option_03 = get_theme_mod('header_page_3', 'Contact');
                     <div class="col-xl-6 d-none d-xl-block">
                         <div class="main-menu main-menu-5">
                             <nav class="tp-main-menu-content">
-                                <ul>
+                                <!-- <ul>
                                     <li class="has-dropdown"><a class="color-active" href="index.html">Home</a></li>
                                     <li class="has-dropdown"><a href="#">Pages</a>
                                         <ul class="submenu tp-submenu">
@@ -89,7 +89,8 @@ $header_option_03 = get_theme_mod('header_page_3', 'Contact');
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
-                                </ul>
+                                </ul> -->
+                                <?php tecHub_menu(); ?>
                             </nav>
                         </div>
                     </div>
