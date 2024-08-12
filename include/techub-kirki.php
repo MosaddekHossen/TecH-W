@@ -8,10 +8,11 @@ new \Kirki\Panel(
     ]
 );
 
+// tecHub_header_info
 function tecHub_header_info()
 {
     new \Kirki\Section(
-        'header_section_id',
+        'header_info_section',
         [
             'title'       => esc_html__('Header address Section', 'kirki'),
             'description' => esc_html__('Header Section Description.', 'kirki'),
@@ -24,7 +25,7 @@ function tecHub_header_info()
         [
             'settings'    => 'header_email',
             'label'       => esc_html__('Header Email', 'kirki'),
-            'section'     => 'header_section_id',
+            'section'     => 'header_info_section',
             'default'     => esc_html__('techubinfo@mail.com', 'kirki'),
         ]
     );
@@ -33,13 +34,14 @@ function tecHub_header_info()
         [
             'settings'    => 'header_location',
             'label'       => esc_html__('Header Location', 'kirki'),
-            'section'     => 'header_section_id',
+            'section'     => 'header_info_section',
             'default'     => esc_html__('Manchester 21, Zurich, CH', 'kirki'),
         ]
     );
 }
 tecHub_header_info();
 
+// tecHub_header_page_name
 function tecHub_header_page_name()
 {
     new \Kirki\Section(
@@ -80,3 +82,26 @@ function tecHub_header_page_name()
     );
 }
 tecHub_header_page_name();
+
+function tecHub_header_logo()
+{
+    new \Kirki\Section(
+        'header_logo_section',
+        [
+            'title'       => esc_html__('Header Logo', 'kirki'),
+            'description' => esc_html__('Header Section Description.', 'kirki'),
+            'panel'       => 'header_panel_id',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings'    => 'logo_url',
+            'label'       => esc_html__('Logo', 'kirki'),
+            'section'     => 'header_logo_section',
+            'default'     => get_template_directory_uri() . '/assets/img/logo/logo.png',
+        ]
+    );
+}
+tecHub_header_logo();
