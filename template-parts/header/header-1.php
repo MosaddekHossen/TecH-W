@@ -1,9 +1,9 @@
 <?php
-$header_email = get_theme_mod('header_email', 'techubinfo@mail.com');
-$header_location = get_theme_mod('header_location', 'Manchester 21, Zurich, CH');
-$header_option_01 = get_theme_mod('header_page_1', 'Faq / ');
-$header_option_02 = get_theme_mod('header_page_2', 'Service / ');
-$header_option_03 = get_theme_mod('header_page_3', 'Contact');
+$header_email = get_theme_mod('header_email', __('techubinfo@mail.com', 'tecHub'));
+$header_location = get_theme_mod('header_location', __('Manchester 21, Zurich, CH', 'tecHub'));
+$header_option_01 = get_theme_mod('header_page_1', __('Faq / ', 'tecHub'));
+$header_option_02 = get_theme_mod('header_page_2', __('Service / ', 'tecHub'));
+$header_option_03 = get_theme_mod('header_page_3', __('Contact', 'tecHub'));
 ?>
 <!-- header area start -->
 <header class="tp-header-height">
@@ -39,10 +39,11 @@ $header_option_03 = get_theme_mod('header_page_3', 'Contact');
                             </ul>
                         </div>
                         <div class="tp-header-top-social">
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
                             <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a> -->
+                            <?php tecHub_social(); ?>
                         </div>
                     </div>
                 </div>

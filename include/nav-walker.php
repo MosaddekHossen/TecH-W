@@ -49,7 +49,7 @@ class TecHub_Walker_Nav_Menu extends Walker
 		$indent = str_repeat($t, $depth);
 
 		// Default class.
-		$classes = array('submenu');
+		$classes = array('submenu tp-submenu');
 
 		/**
 		 * Filters the CSS class(es) applied to a menu list element.

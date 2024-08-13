@@ -38,6 +38,15 @@ function tecHub_header_info()
             'default'     => esc_html__('Manchester 21, Zurich, CH', 'kirki'),
         ]
     );
+
+    new \Kirki\Field\Textarea(
+        [
+            'settings'    => 'header_phone',
+            'label'       => esc_html__('Header Location', 'kirki'),
+            'section'     => 'header_info_section',
+            'default'     => esc_html__('(+00) 678 345 98568', 'kirki'),
+        ]
+    );
 }
 tecHub_header_info();
 
@@ -83,6 +92,112 @@ function tecHub_header_page_name()
 }
 tecHub_header_page_name();
 
+// tecHub_social_section
+function tecHub_social_section()
+{
+    new \Kirki\Section(
+        'tecHub_social_info',
+        [
+            'title'       => esc_html__('Social Icon', 'tecHub'),
+            'description' => esc_html__('Side info section here', 'tecHub'),
+            'panel'       => 'header_panel_id',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tecHub_facebook',
+            'label'    => esc_html__('Facebook Url', 'tecHub'),
+            'section'  => 'tecHub_social_info',
+            'default'  => esc_html__('#', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tecHub_twitter',
+            'label'    => esc_html__('Twitter Url', 'tecHub'),
+            'section'  => 'tecHub_social_info',
+            'default'  => esc_html__('#', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tecHub_instagram',
+            'label'    => esc_html__('Instagram Url', 'tecHub'),
+            'section'  => 'tecHub_social_info',
+            'default'  => esc_html__('', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tecHub_pinterest',
+            'label'    => esc_html__('Pinterest Url', 'tecHub'),
+            'section'  => 'tecHub_social_info',
+            'default'  => esc_html__('', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tecHub_youtube',
+            'label'    => esc_html__('Youtube Url', 'tecHub'),
+            'section'  => 'tecHub_social_info',
+            'default'  => esc_html__('#', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tecHub_linkedin',
+            'label'    => esc_html__('Linkedin Url', 'tecHub'),
+            'section'  => 'tecHub_social_info',
+            'default'  => esc_html__('#', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tecHub_flickr',
+            'label'    => esc_html__('Flickr Url', 'tecHub'),
+            'section'  => 'tecHub_social_info',
+            'default'  => esc_html__('', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tecHub_vimeo',
+            'label'    => esc_html__('Vimeo Url', 'tecHub'),
+            'section'  => 'tecHub_social_info',
+            'default'  => esc_html__('', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tecHub_behance',
+            'label'    => esc_html__('Behance Url', 'tecHub'),
+            'section'  => 'tecHub_social_info',
+            'default'  => esc_html__('', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+}
+tecHub_social_section();
+
+// tecHub_header_logo
 function tecHub_header_logo()
 {
     new \Kirki\Section(

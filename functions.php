@@ -58,9 +58,9 @@ function theme_setup()
 
     register_nav_menus(
         array(
-            'main-menu' => __('Main Menu', 'harry'),
-            'side-menu' => __('Side Menu', 'harry'),
-            'footer-menu' => __('Footer Menu', 'harry'),
+            'main-menu' => __('Main Menu', 'tecHub'),
+            'side-menu' => __('Side Menu', 'tecHub'),
+            'footer-menu' => __('Footer Menu', 'tecHub'),
         )
     );
 }
@@ -73,6 +73,7 @@ function tecHub_menu()
         array(
             'theme_location'  => 'main-menu',
             'menu_class'      => '',
+            'container'       => 'false',
             'menu_id'         => '',
             'fallback_cb'     => 'TecHub_Walker_Nav_Menu::fallback',
             'walker'     => new TecHub_Walker_Nav_Menu,
