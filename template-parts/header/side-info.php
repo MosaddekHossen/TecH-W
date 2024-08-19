@@ -2,6 +2,10 @@
 $header_email = get_theme_mod('header_email', __('techubinfo@mail.com', 'tecHub'));
 $header_location = get_theme_mod('header_location', __('Manchester 21, Zurich, CH', 'tecHub'));
 $header_phone = get_theme_mod('header_phone', __('(+00) 678 345 98568', 'tecHub'));
+
+$side_title = get_theme_mod('side_title', __('Contact us', 'tecHub'));
+$side_des = get_theme_mod('side_des', __('Techub is the partner of choice for many of the world’s leading enterprises. We help businesses development.', 'tecHub'));
+
 ?>
 <!-- tp-offcanvus-area-start -->
 <div class="tpoffcanvas-area">
@@ -17,12 +21,14 @@ $header_phone = get_theme_mod('header_phone', __('(+00) 678 345 98568', 'tecHub'
             </a>
         </div>
         <div class="tpoffcanvas__title">
-            <p>Techub is the partner of choice for many of the world’s leading enterprises. We help businesses development.</p>
+            <!-- <p>Techub is the partner of choice for many of the world’s leading enterprises. We help businesses development.</p> -->
+            <p><?php echo $side_des; ?> </p>
         </div>
         <div class="tp-main-menu-mobile d-xl-none"></div>
         <div class="tpoffcanvas__contact-info">
             <div class="tpoffcanvas__contact-title">
-                <h5>Contact us</h5>
+                <!-- <h5>Contact us</h5> -->
+                <h5><?php echo $side_title; ?> </h5>
             </div>
             <ul>
                 <?php if (!empty($header_location)): ?>

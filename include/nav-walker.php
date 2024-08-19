@@ -142,6 +142,7 @@ class TecHub_Walker_Nav_Menu extends Walker
 		$classes[] = 'menu-item-' . $menu_item->ID;
 		// if we need li custom class
 		// $classes[] = 'menu-li-custom-class';
+		$classes[] = 'has-dropdown';
 
 		// if html li has custom dropdown class 
 		// if($args->walker->has_children == true) {

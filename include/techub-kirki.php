@@ -74,10 +74,28 @@ function tecHub_header_page_name()
 
     new \Kirki\Field\Text(
         [
+            'settings'    => 'header_page_01_url',
+            'label'       => esc_html__('Page Option 01 Url', 'kirki'),
+            'section'     => 'header_page_option',
+            'default'     => esc_html__('#', 'kirki'),
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
             'settings'    => 'header_page_2',
             'label'       => esc_html__('Page Option 02', 'kirki'),
             'section'     => 'header_page_option',
             'default'     => esc_html__('Service', 'kirki'),
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings'    => 'header_page_02_url',
+            'label'       => esc_html__('Page Option 02 Url', 'kirki'),
+            'section'     => 'header_page_option',
+            'default'     => esc_html__('#', 'kirki'),
         ]
     );
 
@@ -89,8 +107,50 @@ function tecHub_header_page_name()
             'default'     => esc_html__('Contact', 'kirki'),
         ]
     );
+
+    new \Kirki\Field\Text(
+        [
+            'settings'    => 'header_page_03_url',
+            'label'       => esc_html__('Page Option 03 Url', 'kirki'),
+            'section'     => 'header_page_option',
+            'default'     => esc_html__('#', 'kirki'),
+        ]
+    );
 }
 tecHub_header_page_name();
+
+// tecHub_header_page_name
+function tecHub_side_info()
+{
+    new \Kirki\Section(
+        'header_side_info',
+        [
+            'title'       => esc_html__('Side info', 'kirki'),
+            'description' => esc_html__('Side info section', 'kirki'),
+            'panel'       => 'header_panel_id',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Textarea(
+        [
+            'settings'    => 'side_title',
+            'label'       => esc_html__('Page Option 01', 'kirki'),
+            'section'     => 'header_side_info',
+            'default'     => esc_html__('Contact us', 'kirki'),
+        ]
+    );
+
+    new \Kirki\Field\Textarea(
+        [
+            'settings'    => 'side_des',
+            'label'       => esc_html__('Page Option 02', 'kirki'),
+            'section'     => 'header_side_info',
+            'default'     => esc_html__('Techub is the partner of choice for many of the world`s leading enterprises. We help businesses development.', 'kirki'),
+        ]
+    );
+}
+tecHub_side_info();
 
 // tecHub_social_section
 function tecHub_social_section()
@@ -203,7 +263,7 @@ function tecHub_header_logo()
     new \Kirki\Section(
         'header_logo_section',
         [
-            'title'       => esc_html__('Header Logo', 'kirki'),
+            'title'       => esc_html__('Header Logo And Button', 'kirki'),
             'description' => esc_html__('Header Section Description.', 'kirki'),
             'panel'       => 'header_panel_id',
             'priority'    => 160,
@@ -216,6 +276,26 @@ function tecHub_header_logo()
             'label'       => esc_html__('Logo', 'kirki'),
             'section'     => 'header_logo_section',
             'default'     => get_template_directory_uri() . '/assets/img/logo/logo.png',
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'button_text',
+            'label'    => esc_html__('Button text', 'tecHub'),
+            'section'  => 'header_logo_section',
+            'default'  => esc_html__('Get a Quete', 'tecHub'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'button_url',
+            'label'    => esc_html__('Button url', 'tecHub'),
+            'section'  => 'header_logo_section',
+            'default'  => esc_html__('#', 'tecHub'),
+            'priority' => 10,
         ]
     );
 }

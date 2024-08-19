@@ -1,9 +1,17 @@
 <?php
 $header_email = get_theme_mod('header_email', __('techubinfo@mail.com', 'tecHub'));
 $header_location = get_theme_mod('header_location', __('Manchester 21, Zurich, CH', 'tecHub'));
+
 $header_option_01 = get_theme_mod('header_page_1', __('Faq / ', 'tecHub'));
 $header_option_02 = get_theme_mod('header_page_2', __('Service / ', 'tecHub'));
 $header_option_03 = get_theme_mod('header_page_3', __('Contact', 'tecHub'));
+$header_page_01_url = get_theme_mod('header_page_01_url', __('#', 'tecHub'));
+$header_page_02_url = get_theme_mod('header_page_02_url', __('#', 'tecHub'));
+$header_page_03_url = get_theme_mod('header_page_03_url', __('#', 'tecHub'));
+
+$button_text = get_theme_mod('button_text', __('Get a Quete', 'tecHub'));
+$button_url = get_theme_mod('button_url', __('#', 'tecHub'));
+
 ?>
 <!-- header area start -->
 <header class="tp-header-height">
@@ -13,10 +21,10 @@ $header_option_03 = get_theme_mod('header_page_3', __('Contact', 'tecHub'));
                 <div class="col-xl-6">
                     <div class="tp-header-top-address tp-header-5-top-address">
                         <?php if (!empty($header_location)): ?>
-                            <span><i class="fa-thin fa-location-dot"></i><a href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"><?php echo $header_location; ?> </a></span>
+                            <span><i class="fa-thin fa-location-dot"></i><a href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"><?php echo esc_html($header_location); ?> </a></span>
                         <?php endif; ?>
                         <?php if (!empty($header_email)): ?>
-                            <span><i class="fa-light fa-envelope"></i> <a href="mailto:techubinfo@mail.com"><?php echo $header_email; ?> </a></span>
+                            <span><i class="fa-light fa-envelope"></i> <a href="mailto:techubinfo@mail.com"><?php echo esc_html($header_email); ?> </a></span>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -28,13 +36,13 @@ $header_option_03 = get_theme_mod('header_page_3', __('Contact', 'tecHub'));
                                 <li><a href="service.html">Service <span>/</span></a></li>
                                 <li><a href="contact.html">Contact</a></li> -->
                                 <?php if (!empty($header_option_01)): ?>
-                                    <li><a href="faq.html"><?php echo $header_option_01; ?> </a></li>
+                                    <li><a href="<?php echo esc_url($header_page_01_url); ?> "><?php echo esc_html($header_option_01); ?> </a></li>
                                 <?php endif; ?>
                                 <?php if (!empty($header_option_02)): ?>
-                                    <li><a href="service.html"><?php echo $header_option_02; ?></a></li>
+                                    <li><a href="<?php echo esc_url($header_page_02_url); ?> "><?php echo esc_html($header_option_02); ?></a></li>
                                 <?php endif; ?>
                                 <?php if (!empty($header_option_03)): ?>
-                                    <li><a href="contact.html"><?php echo $header_option_03; ?></a></li>
+                                    <li><a href="<?php echo esc_url($header_page_03_url); ?> "><?php echo esc_html($header_option_03); ?></a></li>
                                 <?php endif; ?>
                             </ul>
                         </div>
@@ -104,9 +112,11 @@ $header_option_03 = get_theme_mod('header_page_3', __('Contact', 'tecHub'));
                             </div>
 
                             <!-- header button -->
-                            <div class="tp-header-button d-none d-lg-block">
-                                <a class="tp-header-btn" rel="noreferrer" href="contact.html" target="_blank"><span>Get a Quete</span></a>
-                            </div>
+                            <?php if (!empty($button_text)): ?>
+                                <div class="tp-header-button d-none d-lg-block">
+                                    <a class="tp-header-btn" rel="noreferrer" href="<?php echo esc_url($button_url); ?>"><span><?php echo esc_html($button_text); ?> </span></a>
+                                </div>
+                            <?php endif; ?>
 
                             <!-- header mobile menu ber -->
                             <div class="tp-header-menu-ber">

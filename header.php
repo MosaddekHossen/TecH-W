@@ -7,7 +7,6 @@
     <?php if (is_singular() && pings_open(get_queried_object())) : ?>
     <?php endif; ?>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Techub – Technology & IT Solutions HTML Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -55,7 +54,6 @@
 
     <!-- Header part -->
     <?php tecHub_header(); ?>
-
 
     <!-- slider area start -->
     <section class="tp-slider-5-area p-relative z-index-1 fix">
