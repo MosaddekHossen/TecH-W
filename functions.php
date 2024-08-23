@@ -40,6 +40,8 @@ function theme_setup()
             'footer-menu' => __('Footer Menu', 'tecHub'),
         )
     );
+
+    remove_theme_support('widgets-block-editor');
 }
 add_action('after_setup_theme', 'theme_setup');
 
@@ -57,6 +59,48 @@ function tecHub_menu()
         )
     );
 }
+
+// tecHub_widgets
+function tecHub_widgets()
+{
+    register_sidebar(array(
+        'name'          => __('Footer Widget 01', 'tecHub'),
+        'id'            => 'footer-widget-01',
+        'description'   => __('Widgets in this area will be shown footer.', 'tecHub'),
+        'before_widget' => '<div id="%1$s" class="tp-footer-widget footer-cols-1 pr-75 tp-footer-widget-cutm-pdg-4 wow fadeInUp %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+    register_sidebar(array(
+        'name'          => __('Footer Widget 02', 'tecHub'),
+        'id'            => 'footer-widget-02',
+        'description'   => __('Widgets in this area will be shown footer.', 'tecHub'),
+        'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-4-widget footer-cols-2 wow fadeInUp %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="tp-footer-title tp-footer-4-title">',
+        'after_title'   => '</h4>',
+    ));
+    register_sidebar(array(
+        'name'          => __('Footer Widget 03', 'tecHub'),
+        'id'            => 'footer-widget-03',
+        'description'   => __('Widgets in this area will be shown footer.', 'tecHub'),
+        'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-4-widget footer-cols-3 pl-50 tp-footer-widget-cutm-pdg-3 wow fadeInUp %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="tp-footer-title tp-footer-4-title">',
+        'after_title'   => '</h4>',
+    ));
+    register_sidebar(array(
+        'name'          => __('Footer Widget 04', 'tecHub'),
+        'id'            => 'footer-widget-04',
+        'description'   => __('Widgets in this area will be shown footer.', 'tecHub'),
+        'before_widget' => '<div id="%1$s" class="tp-footer-widget footer-cols-4 wow fadeInUp %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="tp-footer-title tp-footer-4-title">',
+        'after_title'   => '</h4>',
+    ));
+}
+add_action('widgets_init', 'tecHub_widgets');
 
 function tecHub_header()
 {
