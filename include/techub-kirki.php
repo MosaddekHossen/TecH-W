@@ -300,3 +300,36 @@ function tecHub_header_logo()
     );
 }
 tecHub_header_logo();
+
+// tecHub_header_page_name
+function tecHub_footer_copyright()
+{
+    new \Kirki\Section(
+        'header_side_info',
+        [
+            'title'       => esc_html__('Side info', 'kirki'),
+            'description' => esc_html__('Side info section', 'kirki'),
+            'panel'       => 'header_panel_id',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Textarea(
+        [
+            'settings'    => 'side_title',
+            'label'       => esc_html__('Page Option 01', 'kirki'),
+            'section'     => 'header_side_info',
+            'default'     => esc_html__('Contact us', 'kirki'),
+        ]
+    );
+
+    new \Kirki\Field\Textarea(
+        [
+            'settings'    => 'side_des',
+            'label'       => esc_html__('Page Option 02', 'kirki'),
+            'section'     => 'header_side_info',
+            'default'     => esc_html__('Techub is the partner of choice for many of the world`s leading enterprises. We help businesses development.', 'kirki'),
+        ]
+    );
+}
+tecHub_footer_copyright();
