@@ -3,8 +3,8 @@ new \Kirki\Panel(
     'header_panel_id',
     [
         'priority'    => 10,
-        'title'       => esc_html__('TecHub Options', 'kirki'),
-        'description' => esc_html__('Header Panel Description.', 'kirki'),
+        'title'       => esc_html__('TecHub Options', 'tecHub'),
+        'description' => esc_html__('Header Panel Description.', 'tecHub'),
     ]
 );
 
@@ -14,8 +14,8 @@ function tecHub_header_info()
     new \Kirki\Section(
         'header_info_section',
         [
-            'title'       => esc_html__('Header address Section', 'kirki'),
-            'description' => esc_html__('Header Section Description.', 'kirki'),
+            'title'       => esc_html__('Header address Section', 'tecHub'),
+            'description' => esc_html__('Header Section Description.', 'tecHub'),
             'panel'       => 'header_panel_id',
             'priority'    => 160,
         ]
@@ -24,27 +24,27 @@ function tecHub_header_info()
     new \Kirki\Field\Text(
         [
             'settings'    => 'header_email',
-            'label'       => esc_html__('Header Email', 'kirki'),
+            'label'       => esc_html__('Header Email', 'tecHub'),
             'section'     => 'header_info_section',
-            'default'     => esc_html__('techubinfo@mail.com', 'kirki'),
+            'default'     => esc_html__('techubinfo@mail.com', 'tecHub'),
         ]
     );
 
     new \Kirki\Field\Textarea(
         [
             'settings'    => 'header_location',
-            'label'       => esc_html__('Header Location', 'kirki'),
+            'label'       => esc_html__('Header Location', 'tecHub'),
             'section'     => 'header_info_section',
-            'default'     => esc_html__('Manchester 21, Zurich, CH', 'kirki'),
+            'default'     => esc_html__('Manchester 21, Zurich, CH', 'tecHub'),
         ]
     );
 
     new \Kirki\Field\Textarea(
         [
             'settings'    => 'header_phone',
-            'label'       => esc_html__('Header Location', 'kirki'),
+            'label'       => esc_html__('Header Location', 'tecHub'),
             'section'     => 'header_info_section',
-            'default'     => esc_html__('(+00) 678 345 98568', 'kirki'),
+            'default'     => esc_html__('(+00) 678 345 98568', 'tecHub'),
         ]
     );
 }
@@ -56,8 +56,8 @@ function tecHub_header_page_name()
     new \Kirki\Section(
         'header_page_option',
         [
-            'title'       => esc_html__('Header Page Option', 'kirki'),
-            'description' => esc_html__('Header Section Description.', 'kirki'),
+            'title'       => esc_html__('Header Page Option', 'tecHub'),
+            'description' => esc_html__('Header Section Description.', 'tecHub'),
             'panel'       => 'header_panel_id',
             'priority'    => 160,
         ]
@@ -66,54 +66,54 @@ function tecHub_header_page_name()
     new \Kirki\Field\Text(
         [
             'settings'    => 'header_page_1',
-            'label'       => esc_html__('Page Option 01', 'kirki'),
+            'label'       => esc_html__('Page Option 01', 'tecHub'),
             'section'     => 'header_page_option',
-            'default'     => esc_html__('Faq', 'kirki'),
+            'default'     => esc_html__('Faq', 'tecHub'),
         ]
     );
 
     new \Kirki\Field\Text(
         [
             'settings'    => 'header_page_01_url',
-            'label'       => esc_html__('Page Option 01 Url', 'kirki'),
+            'label'       => esc_html__('Page Option 01 Url', 'tecHub'),
             'section'     => 'header_page_option',
-            'default'     => esc_html__('#', 'kirki'),
+            'default'     => esc_html__('#', 'tecHub'),
         ]
     );
 
     new \Kirki\Field\Text(
         [
             'settings'    => 'header_page_2',
-            'label'       => esc_html__('Page Option 02', 'kirki'),
+            'label'       => esc_html__('Page Option 02', 'tecHub'),
             'section'     => 'header_page_option',
-            'default'     => esc_html__('Service', 'kirki'),
+            'default'     => esc_html__('Service', 'tecHub'),
         ]
     );
 
     new \Kirki\Field\Text(
         [
             'settings'    => 'header_page_02_url',
-            'label'       => esc_html__('Page Option 02 Url', 'kirki'),
+            'label'       => esc_html__('Page Option 02 Url', 'tecHub'),
             'section'     => 'header_page_option',
-            'default'     => esc_html__('#', 'kirki'),
+            'default'     => esc_html__('#', 'tecHub'),
         ]
     );
 
     new \Kirki\Field\Text(
         [
             'settings'    => 'header_page_3',
-            'label'       => esc_html__('Page Option 03', 'kirki'),
+            'label'       => esc_html__('Page Option 03', 'tecHub'),
             'section'     => 'header_page_option',
-            'default'     => esc_html__('Contact', 'kirki'),
+            'default'     => esc_html__('Contact', 'tecHub'),
         ]
     );
 
     new \Kirki\Field\Text(
         [
             'settings'    => 'header_page_03_url',
-            'label'       => esc_html__('Page Option 03 Url', 'kirki'),
+            'label'       => esc_html__('Page Option 03 Url', 'tecHub'),
             'section'     => 'header_page_option',
-            'default'     => esc_html__('#', 'kirki'),
+            'default'     => esc_html__('#', 'tecHub'),
         ]
     );
 }
@@ -125,8 +125,8 @@ function tecHub_side_info()
     new \Kirki\Section(
         'header_side_info',
         [
-            'title'       => esc_html__('Side info', 'kirki'),
-            'description' => esc_html__('Side info section', 'kirki'),
+            'title'       => esc_html__('Side info', 'tecHub'),
+            'description' => esc_html__('Side info section', 'tecHub'),
             'panel'       => 'header_panel_id',
             'priority'    => 160,
         ]
@@ -135,18 +135,18 @@ function tecHub_side_info()
     new \Kirki\Field\Textarea(
         [
             'settings'    => 'side_title',
-            'label'       => esc_html__('Page Option 01', 'kirki'),
+            'label'       => esc_html__('Page Option 01', 'tecHub'),
             'section'     => 'header_side_info',
-            'default'     => esc_html__('Contact us', 'kirki'),
+            'default'     => esc_html__('Contact us', 'tecHub'),
         ]
     );
 
     new \Kirki\Field\Textarea(
         [
             'settings'    => 'side_des',
-            'label'       => esc_html__('Page Option 02', 'kirki'),
+            'label'       => esc_html__('Page Option 02', 'tecHub'),
             'section'     => 'header_side_info',
-            'default'     => esc_html__('Techub is the partner of choice for many of the world`s leading enterprises. We help businesses development.', 'kirki'),
+            'default'     => esc_html__('Techub is the partner of choice for many of the world`s leading enterprises. We help businesses development.', 'tecHub'),
         ]
     );
 }
@@ -263,8 +263,8 @@ function tecHub_header_logo()
     new \Kirki\Section(
         'header_logo_section',
         [
-            'title'       => esc_html__('Header Logo And Button', 'kirki'),
-            'description' => esc_html__('Header Section Description.', 'kirki'),
+            'title'       => esc_html__('Header Logo And Button', 'tecHub'),
+            'description' => esc_html__('Header Section Description.', 'tecHub'),
             'panel'       => 'header_panel_id',
             'priority'    => 160,
         ]
@@ -273,7 +273,7 @@ function tecHub_header_logo()
     new \Kirki\Field\Image(
         [
             'settings'    => 'logo_url',
-            'label'       => esc_html__('Logo', 'kirki'),
+            'label'       => esc_html__('Logo', 'tecHub'),
             'section'     => 'header_logo_section',
             'default'     => get_template_directory_uri() . '/assets/img/logo/logo.png',
         ]
@@ -305,10 +305,10 @@ tecHub_header_logo();
 function tecHub_footer_copyright()
 {
     new \Kirki\Section(
-        'header_side_info',
+        'tecHub_copyright',
         [
-            'title'       => esc_html__('Side info', 'kirki'),
-            'description' => esc_html__('Side info section', 'kirki'),
+            'title'       => esc_html__('Side info', 'tecHub'),
+            'description' => esc_html__('Side info section', 'tecHub'),
             'panel'       => 'header_panel_id',
             'priority'    => 160,
         ]
@@ -316,10 +316,10 @@ function tecHub_footer_copyright()
 
     new \Kirki\Field\Textarea(
         [
-            'settings'    => 'side_title',
-            'label'       => esc_html__('Page Option 01', 'kirki'),
-            'section'     => 'header_side_info',
-            'default'     => esc_html__('Contact us', 'kirki'),
+            'settings'    => 'tecHub_copyright_text',
+            'label'       => esc_html__('Copyright', 'tecHub'),
+            'section'     => 'tecHub_copyright',
+            'default'     => esc_html__('Copyright text here', 'tecHub'),
         ]
     );
 }
