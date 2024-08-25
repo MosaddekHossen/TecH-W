@@ -322,14 +322,5 @@ function tecHub_footer_copyright()
             'default'     => esc_html__('Contact us', 'kirki'),
         ]
     );
-
-    new \Kirki\Field\Textarea(
-        [
-            'settings'    => 'side_des',
-            'label'       => esc_html__('Page Option 02', 'kirki'),
-            'section'     => 'header_side_info',
-            'default'     => esc_html__('Techub is the partner of choice for many of the world`s leading enterprises. We help businesses development.', 'kirki'),
-        ]
-    );
 }
 tecHub_footer_copyright();
