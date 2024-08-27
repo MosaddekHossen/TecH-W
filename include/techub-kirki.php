@@ -319,7 +319,7 @@ function tecHub_footer_copyright()
             'settings'    => 'tecHub_copyright_text',
             'label'       => esc_html__('Copyright', 'tecHub'),
             'section'     => 'tecHub_copyright',
-            'default'     => esc_html__('Copyright text here', 'tecHub'),
+            'default'     => esc_html__('Full Copyright & Design By @ Theme pure - 2024', 'tecHub'),
         ]
     );
 }
