@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="tp-footer-copy-right text-center wow fadeInUp">
-                        <p class="tp-footer-copy-paragraph tp-footer-4-copy-paragraph">Full Copyright & Design By <a href="#">@ Theme pure</a> – 2024</p>
+                        <p class="tp-footer-copy-paragraph tp-footer-4-copy-paragraph"><?php footer_copyright(); ?></p>
                     </div>
                 </div>
             </div>

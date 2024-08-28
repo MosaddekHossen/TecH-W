@@ -307,8 +307,8 @@ function tecHub_footer_copyright()
     new \Kirki\Section(
         'tecHub_copyright',
         [
-            'title'       => esc_html__('Side info', 'tecHub'),
-            'description' => esc_html__('Side info section', 'tecHub'),
+            'title'       => esc_html__('CopyRight', 'tecHub'),
+            'description' => esc_html__('CopyRight section', 'tecHub'),
             'panel'       => 'header_panel_id',
             'priority'    => 160,
         ]

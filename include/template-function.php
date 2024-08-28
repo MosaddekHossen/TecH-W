@@ -66,7 +66,7 @@ function tecHub_social()
 // footer_copyright
 function footer_copyright()
 {
-    $footer_copyright = get_theme_mod('tecHub_footer_copyright', __('© 2024 tecHub All Rights Reserved.', 'tecHub'));
+    $footer_copyright = get_theme_mod('tecHub_copyright_text', __('Full Copyright & Design By @ Theme pure - 2024', 'tecHub'));
 ?>
     <?php echo tecHub_kses($footer_copyright); ?>
 <?php
