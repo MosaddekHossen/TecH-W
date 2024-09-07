@@ -102,6 +102,7 @@ function tecHub_widgets()
 }
 add_action('widgets_init', 'tecHub_widgets');
 
+// tecHub_header
 function tecHub_header()
 {
     get_template_part('template-parts/header/header-1');
