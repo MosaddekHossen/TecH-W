@@ -36,26 +36,19 @@ function harry_breadcrumb()
     $breadcrumb_switch = function_exists('get_field') ? get_field('breadcrumb_on_off') : null;
     // var_dump($breadcrumb_switch);
 ?>
-    <?php if (!empty($breadcrumb_switch)) : ?>
-        <!-- breadcrumb area start -->
-        <section class="breadcrumb__area pt-130 pb-115 breadcrumb__style-10 black-bg p-relative z-index-1">
-            <div class="breadcrumb__bg-4 breadcrumb__bg-overlay m-img include-bg" data-background="<?php echo esc_url($breadcrumb_bg_img); ?>"></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10">
-                        <div class="breadcrumb__content text-center">
-                            <h3 class="breadcrumb__title"><?php echo esc_html($title); ?></h3>
-                            <?php if (function_exists('bcn_display')) : ?>
-                                <div class="breadcrumb__list">
-                                    <?php bcn_display(); ?>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                    </div>
+
+    <!-- portfolio area start -->
+    <section class="tp-blog-breadcrumb-area" data-background="assets/img/blog/blog-sidebar-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="tp-portfolio-breadcrumb-content text-center">
+                    <h2 class="tp-portfolio-breadcrumb-title">Blog Sidebar</h2>
+                    <p class="tp-portfolio-breadcrumb-body tp-blog-sideber-breadcrumb-body"><span><a href="index.html">TECHUB</a></span> <span class="spacing">/</span> BLOG SIDEBAR</p>
                 </div>
             </div>
-        </section>
-        <!-- breadcrumb area end -->
-    <?php endif; ?>
+        </div>
+    </section>
+    <!-- portfolio area end -->
+
 <?php
 }

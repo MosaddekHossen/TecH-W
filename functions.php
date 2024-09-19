@@ -123,3 +123,4 @@ if (class_exists('Kirki')) {
 include_once('include/common/scripts.php');
 include_once('include/template-function.php');
 include_once('include/nav-walker.php');
+include_once('include/breadcrumb.php');

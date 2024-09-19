@@ -54,9 +54,10 @@
 
     <!-- Header part -->
     <?php tecHub_header(); ?>
+    <?php harry_breadcrumb(); ?>
 
     <!-- slider area start -->
-    <section class="tp-slider-5-area p-relative z-index-1 fix">
+    <!-- <section class="tp-slider-5-area p-relative z-index-1 fix">
         <div class="tp-slider-5-height">
             <div class="tp-slider-5-bg" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider-5-bg-1.png"></div>
             <div class="container">
@@ -89,5 +90,5 @@
         <div class="tp-slider-5-bg-shape">
             <img class="tp-slider-5-bg-shape1" src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/shape/slider-5-shape2.png" alt="">
         </div>
-    </section>
+    </section> -->
     <!-- slider area end -->
