@@ -1,3 +1,169 @@
 <?php get_header(); ?>
 
+<!-- postbox area start -->
+<section class="tp-postbox-area pt-120 pb-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-8 col-xl-8 col-lg-8">
+                <div class="tp-postbox-wrapper">
+                    <?php
+                    if (have_posts()) :
+                        while (have_posts()) : the_post();
+                    ?>
+                            <article class="tp-postbox-item mb-50">
+                                <div class="tp-postbox-thumb p-relative">
+                                    <a href="blog-details.html">
+                                        <?php the_post_thumbnail(); ?>
+                                    </a>
+                                    <div class="tp-postbox-date-text">
+                                        <span>20 <br> Feb</span>
+                                    </div>
+                                </div>
+                                <div class="tp-postbox-content">
+                                    <div class="tp-postbox-meta mb-35">
+                                        <span class="mr-35"><a href="#"><i class="fa-light fa-circle-user"></i>By Bulbul</a></span>
+                                        <span><a href="#"><i class="fal fa-comments"></i> 02 Comments</a></span>
+                                    </div>
+                                    <h3 class="tp-postbox-title">
+                                        <a href="blog-details.html"><?php the_title(); ?> </a>
+                                    </h3>
+                                    <div class="tp-postbox-text">
+                                        <?php the_excerpt(); ?>
+                                    </div>
+                                    <div class="tp-postbox-read">
+                                        <a class="tp-btn" rel="noreferrer" href="blog-details.html" target="_blank"><span>Read More</span></a>
+                                    </div>
+                                </div>
+                            </article>
+                    <?php
+                        endwhile;
+                    endif;
+                    ?>
+
+                    <!-- <div class="tp-postbox-pagination">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="blog-sideber.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+                                </li>
+                                <li>
+                                    <a href="blog-sideber.html">1</a>
+                                </li>
+                                <li>
+                                    <a class="active" href="blog-sideber.html">2</a>
+                                </li>
+                                <li>
+                                    <a href="blog-sideber.html">3</a>
+                                </li>
+                                <li>
+                                    <a href="blog-sideber.html"><i class="fa-solid fa-arrow-right-long"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4">
+                <div class="sidebar__wrapper">
+                    <div class="sidebar__widget sidebar__widget-theme-bg mb-30">
+                        <div class="sidebar__widget-content">
+                            <div class="sidebar__search">
+                                <form action="#">
+                                    <div class="sidebar__search-input-2">
+                                        <input type="text" placeholder="Search here">
+                                        <button type="submit"><i class="far fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__widget mb-30">
+                        <h3 class="sidebar__widget-title">Our Latest Post</h3>
+                        <div class="sidebar__widget-content">
+                            <div class="sidebar__post">
+                                <div class="rc__post mb-5 d-flex align-items-center">
+                                    <div class="rc__post-thumb mr-20">
+                                        <a href="blog-details.html"><img src="assets/img/blog/details-sm-1-1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                        <div class="rc__meta">
+                                            <span><i class="fa-thin fa-comments"></i>
+                                                02 Comments </span>
+                                        </div>
+                                        <h3 class="rc__post-title">
+                                            <a href="blog-details.html">It’s easy to buildup
+                                                business with us</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="rc__post mb-5 d-flex align-items-center active">
+                                    <div class="rc__post-thumb mr-20">
+                                        <a href="blog-details.html"><img src="assets/img/blog/details-sm-1-2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                        <div class="rc__meta">
+                                            <span><i class="fa-thin fa-comments"></i>
+                                                02 Comments </span>
+                                        </div>
+                                        <h3 class="rc__post-title">
+                                            <a href="blog-details.html">Make your life easy
+                                                with rambo banking</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="rc__post d-flex align-items-center">
+                                    <div class="rc__post-thumb mr-20">
+                                        <a href="blog-details.html"><img src="assets/img/blog/details-sm-1-3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                        <div class="rc__meta">
+                                            <span><i class="fa-thin fa-comments"></i>
+                                                02 Comments </span>
+                                        </div>
+                                        <h3 class="rc__post-title">
+                                            <a href="blog-details.html">Strategy for norway
+                                                peion fund global</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__widget mb-30">
+                        <h3 class="sidebar__widget-title">Catagories</h3>
+                        <div class="sidebar__widget-content">
+                            <ul>
+                                <li><a href="blog-details.html">Artificial intelligence<span><i class="fa-sharp fa-solid fa-arrow-right"></i></span></a></li>
+                                <li class="active"><a href="blog-details.html">Cloud service<span><i class="fa-sharp fa-solid fa-arrow-right"></i></span></a></li>
+                                <li><a href="blog-details.html">Business<span><i class="fa-sharp fa-solid fa-arrow-right"></i></span></a></li>
+                                <li><a href="blog-details.html">Cyber data<span><i class="fa-sharp fa-solid fa-arrow-right"></i></span></a></li>
+                                <li><a href="blog-details.html">Technolgy service<span><i class="fa-sharp fa-solid fa-arrow-right"></i></span></a></li>
+                                <li><a href="blog-details.html">Web development<span><i class="fa-sharp fa-solid fa-arrow-right"></i></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar__widget sidebar__widget-last mb-30">
+                        <h3 class="sidebar__widget-title">Tag</h3>
+                        <div class="sidebar__widget-content">
+                            <div class="tagcloud">
+                                <a href="#">Loans</a>
+                                <a href="#">Financial</a><br>
+                                <a href="#">Standards</a>
+                                <a href="#">Bangking</a>
+                                <a href="#">Agent</a>
+                                <a href="#">Economy</a>
+                                <a href="#">Marketing</a>
+                                <a href="#">Debit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!-- postbox area end -->
+
 <?php get_footer(); ?>

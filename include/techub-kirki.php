@@ -324,3 +324,26 @@ function tecHub_footer_copyright()
     );
 }
 tecHub_footer_copyright();
+
+// tecHub_blog
+function tecHub_blog()
+{
+    new \Kirki\Section(
+        'tecHub_blog_section',
+        [
+            'title'       => esc_html__('Blog', 'tecHub'),
+            'description' => esc_html__('Blog section', 'tecHub'),
+            'panel'       => 'header_panel_id',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings'    => 'harry_breadcrumb_bg',
+            'label'       => esc_html__('Blog image', 'tecHub'),
+            'section'     => 'tecHub_blog_section',
+        ]
+    );
+}
+tecHub_blog();
