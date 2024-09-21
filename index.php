@@ -10,31 +10,7 @@
                     if (have_posts()) :
                         while (have_posts()) : the_post();
                     ?>
-                            <article class="tp-postbox-item mb-50">
-                                <div class="tp-postbox-thumb p-relative">
-                                    <a href="blog-details.html">
-                                        <?php the_post_thumbnail(); ?>
-                                    </a>
-                                    <div class="tp-postbox-date-text">
-                                        <span>20 <br> Feb</span>
-                                    </div>
-                                </div>
-                                <div class="tp-postbox-content">
-                                    <div class="tp-postbox-meta mb-35">
-                                        <span class="mr-35"><a href="#"><i class="fa-light fa-circle-user"></i>By Bulbul</a></span>
-                                        <span><a href="#"><i class="fal fa-comments"></i> 02 Comments</a></span>
-                                    </div>
-                                    <h3 class="tp-postbox-title">
-                                        <a href="blog-details.html"><?php the_title(); ?> </a>
-                                    </h3>
-                                    <div class="tp-postbox-text">
-                                        <?php the_excerpt(); ?>
-                                    </div>
-                                    <div class="tp-postbox-read">
-                                        <a class="tp-btn" rel="noreferrer" href="blog-details.html" target="_blank"><span>Read More</span></a>
-                                    </div>
-                                </div>
-                            </article>
+                            <?php echo get_template_part('template-parts/content'); ?>
                     <?php
                         endwhile;
                     endif;
