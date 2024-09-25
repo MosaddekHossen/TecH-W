@@ -1,3 +1,9 @@
+<?php
+
+$url_format = get_field('video_url');
+
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('tp-format-video tp-postbox-item mb-50'); ?>>
     <?php if (has_post_thumbnail()) : ?>
         <div class="tp-postbox-thumb p-relative">
@@ -7,6 +13,11 @@
             <div class="tp-postbox-date-text">
                 <span><?php echo get_the_date('d'); ?><br><?php echo get_the_date('M'); ?></span>
             </div>
+            <?php if (!empty($url_format)) : ?>
+                <div class="tp-postbox-thumb-video">
+                    <a class="popup-video" href="<?php echo esc_url($url_format); ?> "><i class="fa-regular fa-play"></i></a>
+                </div>
+            <?php endif; ?>
         </div>
     <?php endif; ?>
     <div class="tp-postbox-content">
