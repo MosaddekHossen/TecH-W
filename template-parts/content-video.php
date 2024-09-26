@@ -1,6 +1,16 @@
 <?php
 
-$url_format = get_field('video_url');
+if (function_exists('get_field')) {
+    if (!empty(get_field('video_url'))) {
+        $url_format = get_field('video_url');
+    } else {
+        $url_format = 'default_url'; // Fallback value if no video URL is set
+    }
+} else {
+    // Optional: Handle the case where ACF is not installed
+    $url_format = 'acf_plugin_not_active'; // Fallback action if ACF is missing
+    echo 'ACF plugin is not activated or installed.';
+}
 
 ?>
 
@@ -15,7 +25,7 @@ $url_format = get_field('video_url');
             </div>
             <?php if (!empty($url_format)) : ?>
                 <div class="tp-postbox-thumb-video">
-                    <a class="popup-video" href="<?php echo esc_url($url_format); ?> "><i class="fa-regular fa-play"></i></a>
+                    <a class="popup-video" href="<?php echo esc_url($url_format); ?>"><i class="fa-regular fa-play"></i></a>
                 </div>
             <?php endif; ?>
         </div>
