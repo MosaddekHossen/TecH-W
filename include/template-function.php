@@ -177,3 +177,20 @@ function tecHub_kses($tecHub_custom_tag = '')
 
     return wp_kses($tecHub_custom_tag, $tecHub_allowed_html);
 }
+
+// tecHub_blog_navigation
+function tecHub_blog_navigation()
+{
+    $pages = paginate_links(array(
+        'type' => 'array',
+        'prev_text' => __('<i class="fa-solid fa-arrow-left-long"></i>', 'tecHub'),
+        'next_text' => __('<i class="fa-solid fa-arrow-right-long"></i>', 'tecHub')
+    ));
+    if ($pages) {
+        echo '<nav><ul>';
+        foreach ($pages as $page) {
+            echo "<li>$page</li>";
+        }
+        echo '</ul></nav>';
+    }
+}

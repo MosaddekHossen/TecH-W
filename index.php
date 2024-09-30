@@ -16,27 +16,9 @@
                     endif;
                     ?>
 
-                    <!-- <div class="tp-postbox-pagination">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="blog-sideber.html"><i class="fa-solid fa-arrow-left-long"></i></a>
-                                </li>
-                                <li>
-                                    <a href="blog-sideber.html">1</a>
-                                </li>
-                                <li>
-                                    <a class="active" href="blog-sideber.html">2</a>
-                                </li>
-                                <li>
-                                    <a href="blog-sideber.html">3</a>
-                                </li>
-                                <li>
-                                    <a href="blog-sideber.html"><i class="fa-solid fa-arrow-right-long"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div> -->
+                    <div class="tp-postbox-pagination">
+                        <?php tecHub_blog_navigation(); ?>
+                    </div>
                 </div>
             </div>
             <div class="col-xxl-4 col-xl-4 col-lg-4">
