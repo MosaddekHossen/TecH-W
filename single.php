@@ -6,61 +6,16 @@
         <div class="row">
             <div class="col-xxl-8 col-xl-8 col-lg-8">
                 <div class="tp-postbox-wrapper">
+                    <?php
+                    if (have_posts()) :
+                        while (have_posts()) : the_post();
+                    ?>
+                            <?php echo get_template_part('template-parts/content', get_post_format());  ?>
+                    <?php
+                        endwhile;
+                    endif;
+                    ?>
 
-                    <article class="tp-postbox-item">
-                        <div class="tp-postbox-thumb p-relative">
-                            <img src="assets/img/blog/blog-sidebar-11.jpg" alt="">
-                        </div>
-                        <div class="tp-postbox-content">
-                            <div class="tp-postbox-meta mb-35">
-                                <span class="mr-35"><a href="#"><i class="fa-light fa-circle-user"></i>By Bulbul</a></span>
-                                <span><a href="#"><i class="fal fa-comments"></i> 02 Comments</a></span>
-                            </div>
-                            <h3 class="tp-postbox-title">
-                                IT solutions, transforming challenges into
-                            </h3>
-                            <div class="tp-postbox-details-text">
-                                <p>Curabitur luctus euismod metus, eu pellentesque mauris tempus sit amet. Proin ante odio, posuere id lacus auctor, elementum tempor tellus. Integer mattis justo eu enim tempus lacinia. Fusce vitae enim diam. Ut commodo viverra magna non egestas. Integer sodales massa at odio tristique volutpat. Proin posuere odio maximus, eleifend felis sed, ultrices turpis. Proin ultricies sodales nisl vel euismod. Praesent vestibulum sem lorem, eget fermentum justo iaculis et</p>
-
-                                <p>vitae lobortis eros purus non augue. Nullam molestie augue diam, scelerisque porta dolor mollis a. Cras condimentum elementum eros at finibus. pharetra condimentum sagittis. Donec consequat velit et nisi scelerisque, quis iaculis felis tincidunt. In faucibus sapien ut elit hendrerit, et tristique mauris lacinia. Phasellus tincidunt scelerisque lectus sed scelerisque. Donec at enim facilisis, tempus nisi quis, pharetra enim</p>
-
-                            </div>
-                        </div>
-                    </article>
-                    <div class="tp-postbox-details-blockquote p-relative">
-                        <blockquote class="d-flex">
-                            <div class="tp-postbox-details-blockquote-icon">
-                                <img src="assets/img/blog/quote.png" alt="">
-                            </div>
-                            <div class="tp-postbox-details-blockquote-content">
-                                <h4>The new common language will be more simple than the <br>
-                                    existing European languages. It will be as </h4>
-                                <p>Nelson Adam</p>
-                            </div>
-                        </blockquote>
-                    </div>
-                    <div class="tp-postbox-list mb-55">
-                        <h3 class="tp-postbox-list-title">The desire to make a difference</h3>
-                        <div class="row">
-                            <div class="col-xl-5 col-lg-12">
-                                <div class="tp-postbox-list-img">
-                                    <img src="assets/img/blog/blog-details-list.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 col-lg-12">
-                                <div class="tp-postbox-list-content ml-20">
-                                    <ul>
-                                        <li><i class="flaticon-check-2"></i> Sed ut perspiciatis unde iste natus</li>
-                                        <li><i class="flaticon-check-2"></i> Maecenas tempor velit sit amet euismod</li>
-                                        <li><i class="flaticon-check-2"></i> Nulla egestas iaculis metus, id tempor massa</li>
-                                        <li><i class="flaticon-check-2"></i> Sed ut perspiciatis unde iste natus</li>
-                                        <li><i class="flaticon-check-2"></i> Maecenas tempor velit sit amet euismod</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="tp-postbox-list-paragraph">vitae lobortis eros purus non augue. Nullam molestie augue diam, scelerisque porta dolor mollis a. Cras condimentum elementum eros at finibus. pharetra condimentum sagittis. Donec</p>
-                    </div>
                     <div class="tp-postbox-details-share-wrapper">
                         <div class="row">
                             <div class="col-xl-5 col-lg-6 col-md-6">
@@ -81,7 +36,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="tp-postbox-comment mb-50">
                         <h3 class="tp-postbox-comment-title">03 Comments</h3>
                         <ul>
